@@ -1,0 +1,60 @@
+.container{
+    
+    width: 400px;
+    height: 400px;
+    display: grid;
+    background-color: lightcoral;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: 10px;
+    overflow: hidden;
+    
+  
+    
+}
+.operator{
+  
+   font-weight: bold;
+   text-align: center;
+   border-bottom: 2px solid gray;
+   border-right: 2px solid gray;
+   align-self: center;
+   padding: 25px;
+   background: lightgray;
+    
+    
+}
+
+.first-line{
+    
+    background: gray;
+    grid-row: 1 ;
+    grid-column: 1 / 5 ;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    align-self: center;
+    padding: 11px;
+   
+}
+
+
+.button-equal{ 
+    grid-row: 3 / 7;
+    grid-column: 4 / 5;
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;  
+}
+
+
+.button{
+   font-weight: bold;
+   text-align: center;
+   border-bottom: 2px solid gray;
+   border-right: 2px solid gray;
+   align-self: center;
+   padding: 25px;
+   background: whitesmoke;
+}
