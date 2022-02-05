@@ -1,5 +1,10 @@
 body {
 	font-family: monospace;
+	
+}
+
+th, td {
+	color: #ff8888;
 }
 
 #expand-toggle {
@@ -8,11 +13,12 @@ body {
 
 .expandable {
 	visibility: collapse;
-	background: gray;
+	background: #88ff88;
 	color: white;
 }
 
-#expand-btn {
+#expand-btn:after{
+	content: "Mostra righe";
 	display: inline-block;
 	margin-top: 12px;
 	padding: 6px 12px;
@@ -22,7 +28,18 @@ body {
 	transition: 0.3s;
 } 
 
-#expand-toggle:checked + .expandable{
+#expand-toggle:checked ~* .expandable{
 	color: black;
 	visibility: visible;
+	
+
+}
+
+#expand-toggle:checked ~ #expand-btn:after{
+
+	content: "Nascondi righe";
+	
+	
+	
+
 }
