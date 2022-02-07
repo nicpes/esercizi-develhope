@@ -58,3 +58,7 @@
    padding: 25px;
    background: whitesmoke;
 }
+
+.last{
+    border-right: 0;
+}
