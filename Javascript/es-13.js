@@ -18,7 +18,7 @@ const sum = (a, b) => {
     console.log(value);
   }
 
-  
 
+ 
   log(`((${sum(2,4)}) * (${sum(5,2)}) -2) / 5`)
 
