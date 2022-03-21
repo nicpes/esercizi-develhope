@@ -1,7 +1,7 @@
 function createStore() {
     const storeList = [];
   return function (name){
-        storeList.push(`${name.id}:${name.name}`)
+        storeList.push(`${name.id} - ${name.name}`)
         console.log(storeList)
     }
    
