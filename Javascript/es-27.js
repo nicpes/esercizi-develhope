@@ -4,10 +4,10 @@ const person = {
     address : {
         city: "Italy"
     },
+
     fullName(){
         return `${this.firstName} ${this.lastName}`
      }
-
     
   };
   
