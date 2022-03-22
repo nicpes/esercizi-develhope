@@ -1,7 +1,5 @@
 const person = {
-    firstName : "",
-    lastName : "",
-    
+   
     get first(){
         return this.firstName;
     },
