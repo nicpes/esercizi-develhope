@@ -3,7 +3,7 @@ function memoize(fn) {
       return (...args) => {
         let i = args[0];
         if (i in cache) {
-          console.log('Fetching from cache', i);
+          console.log('Fetching from cache for', i);
           return cache[i];
         }
         else {
@@ -23,7 +23,7 @@ function memoize(fn) {
     return x * factorial(x - 1);
   }
   
-  
+
   factorial = memoize(factorial);
   console.log(factorial(10));
   console.log(factorial(6));
