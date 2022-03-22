@@ -5,5 +5,7 @@ const person = {
 }
 
 
-console.log(Object.keys(person))
+for (key of Object.keys(person)){
+    console.log(`${key} : ${person[key]}`)
+}
 
