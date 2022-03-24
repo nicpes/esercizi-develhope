@@ -19,7 +19,8 @@ class Person {
          set lastname(name) {
             this.lastName = name;
           }
-          
+
+        
        get fullName (){
             return `${this.firstName} ${this.lastName}`
         }
