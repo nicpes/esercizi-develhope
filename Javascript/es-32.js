@@ -1,13 +1,12 @@
 function uncompletedNotes(notes) {
 
-  let output = notes.filter(eachVal => {
-    let opt = eachVal.todos.some(({ done }) => done === false);
-    return opt   
+  let filtNotes = notes.filter(obj => {
+    let filtDone = obj.todos.some(({ done }) => done === false);
+    return filtDone   
 }
   )
-  return output
+  return filtNotes
 }
-
 
  const notes = [ {id: 1,description: 'Workout program',todos:[{id: 1,name: 'Push ups - 10 x 3',done: false},{id: 2,name: 'Abdominals - 20 x 3',done: true},{id: 3,name: 'Tapis Roulant - 15min',done: true}]},
  
