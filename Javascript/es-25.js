@@ -1,5 +1,7 @@
 const person = {
-   
+   firstName : "",
+   lastName : "",
+
     get first(){
         return this.firstName;
     },
@@ -13,19 +15,19 @@ const person = {
         this.lastName = lastname;
     },
 
-    fullName : function(){
+    fullName(){
         return `${this.firstName} ${this.lastName}`;
     }
   };
 
-let john = Object.assign({}, person)
-let simon = Object.assign({}, person)
+let john = Object.create(person)
+let simon = Object.create(person)
 
-john.firstName = "John";
-john.lastName = "Doe";
+john.first = "John";
+john.last = "Doe";
 
-simon.firstName = "Simon"
-simon.lastName = "Collins"
+simon.first = "Simon"
+simon.last = "Collins"
 
 console.log(john.fullName()); // John Doe
 console.log(simon.fullName()); // Simon Collins
