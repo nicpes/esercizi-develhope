@@ -1,22 +1,20 @@
 const person = {
-   firstName : "",
-   lastName : "",
 
     get first(){
-        return this.firstName;
+        return this._firstName;
     },
     set first(name){
-        this.firstName = name;
+        this._firstName = name;
     },
     get last(){
-        return this.lastName;
+        return this._lastName;
     },
     set last(lastname){
-        this.lastName = lastname;
+        this._lastName = lastname;
     },
 
     fullName(){
-        return `${this.firstName} ${this.lastName}`;
+        return `${this.first} ${this.last}`;
     }
   };
 
