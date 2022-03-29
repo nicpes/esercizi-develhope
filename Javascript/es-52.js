@@ -8,7 +8,7 @@ const person = {
 
   const json = JSON.stringify(person, (key, value)=>{if (typeof value === 'string'){
       return undefined
-  }return key, value})
+  }return value})
   
   console.log(json); // Should return: { id: 1, age: 25 }
 
