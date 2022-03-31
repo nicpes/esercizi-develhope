@@ -1,36 +1,35 @@
 class BankAccount {
-    #amount = 0;
-    
-    constructor(initialAmount) {
-      this.#amount = initialAmount;
-    }
-  
-    deposit(amount) {
-            if (amount < 0){
-                throw new Error("negative number")
-            }else{
-        this.#amount += amount;
-        
-        }
-    }
+  #amount = 0;
 
-    withdraw(amount) {
-      if (amount < 0){
-        throw new Error("negative number")
-    }else if(amount > this.#amount){
-        throw new Error("can't withdraw the selected import")
-    }else{
-         this.#amount -= amount;
-    }
-    }
-    
-    view() {
-      console.log(this.#amount);
+  constructor(initialAmount) {
+    this.#amount = initialAmount;
+  }
+
+  deposit(amount) {
+    if (amount < 0) {
+      throw new Error("negative number");
+    } else {
+      this.#amount += amount;
     }
   }
-  
-  const bankAccount = new BankAccount(1000);
-  bankAccount.deposit(500);
-  bankAccount.deposit(200);
-  bankAccount.withdraw(10000); 
-  bankAccount.view();
+
+  withdraw(amount) {
+    if (amount < 0) {
+      throw new Error("negative number");
+    } else if (amount > this.#amount) {
+      throw new Error("can't withdraw the selected import");
+    } else {
+      this.#amount -= amount;
+    }
+  }
+
+  view() {
+    console.log(this.#amount);
+  }
+}
+
+const bankAccount = new BankAccount(1000);
+bankAccount.deposit(500);
+bankAccount.deposit(200);
+bankAccount.withdraw(10000);
+bankAccount.view();

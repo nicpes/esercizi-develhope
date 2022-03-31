@@ -1,51 +1,49 @@
 class BankAccount {
-    #amount = 0;
-  
-    constructor(initialAmount) {
-      this.#amount = initialAmount;
-    }
-  
-    
-    deposit(amount) {
-        try{
-      if (amount < 0) {
-        throw new Error('The amount provided cannot be negative');
-      }}
-      catch(err){
-        console.log(err)
-      }
-  
-      this.#amount += amount;
-    }
-  
-    withdraw(amount) {
-        try{
-      if (amount < 0) {
-        throw new Error('The amount provided cannot be negative');
-      }}
-      catch(err){
-          console.log(err)
-      }
-      
-      try{
-      if (this.#amount < amount) {
-        throw new Error('You cannot withdraw more than account balance');
-      }}
-      catch(err){
-          console.log(err)
-      }
-  
-      this.#amount -= amount;
-    }
-  
-    view() {
-      console.log(this.#amount);
-    }
-  }
-  
+  #amount = 0;
 
-  const bankAccount = new BankAccount(1000);
-  bankAccount.deposit(500);
-  bankAccount.deposit(200);
-  bankAccount.withdraw(10000);
-  bankAccount.view();   
+  constructor(initialAmount) {
+    this.#amount = initialAmount;
+  }
+
+  deposit(amount) {
+    try {
+      if (amount < 0) {
+        throw new Error("The amount provided cannot be negative");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    this.#amount += amount;
+  }
+
+  withdraw(amount) {
+    try {
+      if (amount < 0) {
+        throw new Error("The amount provided cannot be negative");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    try {
+      if (this.#amount < amount) {
+        throw new Error("You cannot withdraw more than account balance");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    this.#amount -= amount;
+  }
+
+  view() {
+    console.log(this.#amount);
+  }
+}
+
+const bankAccount = new BankAccount(1000);
+bankAccount.deposit(500);
+bankAccount.deposit(200);
+bankAccount.withdraw(10000);
+bankAccount.view();
