@@ -21,13 +21,18 @@ const persons = [
 
 function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
-      persons.forEach(object=>{if (object.id === id) {
-        setTimeout(() => resolve(persons.filter((item) => item.id === id)), 1000);
+    persons.forEach((object) => {
+      if (object.id === id) {
+        resolve(persons.filter((item) => item.id === id));
       } else {
-        reject(new Error("Non esiste nessuna persona con questo ID"));
+        reject(new Error("Id not valid"));
       }
-    });})
-   
+    });
+  });
 }
 
-fetchPersonById(2).then((person) => console.log(person));
+fetchPersonById(1).then((person) => console.log(person));
+
+fetchPersonById(4)
+  .then((person) => console.log(person))
+  .catch((error) => console.log("Id not valid"));
