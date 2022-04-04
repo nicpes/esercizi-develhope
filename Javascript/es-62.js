@@ -42,8 +42,4 @@ async function fetchPers(id) {
   }
 }
 
-//.then((personJson) => JSON.parse(personJson))
-//.then((person) => console.log(person))
-//.catch((err) => console.error(err))
-
 fetchPers(2);
