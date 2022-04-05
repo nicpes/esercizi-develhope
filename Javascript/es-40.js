@@ -21,6 +21,13 @@ class Person {
     this.lastName = name;
   }
 
+  get age() {
+    return this.age;
+  }
+
+  set age(age) {
+    this.age = age;
+  }
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
