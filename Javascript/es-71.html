@@ -21,11 +21,13 @@
 
 <script>
   const firstname = document.getElementById("firstName");
-  const firstLabel = firstname.closest("label");
+  const firstLabel = firstname.previousElementSibling;
   const lastname = document.getElementById("lastName");
-  const lastLabel = lastname.closest("label");
+  const lastLabel = lastname.previousElementSibling;
   const age = document.getElementById("age");
-  const ageLabel = age.closest("label");
+  const ageLabel = age.previousElementSibling;
 
-  console.log(firstname.value, firstLabel.textContent);
+  console.log(`${firstLabel.textContent} : ${firstname.value}
+${lastLabel.textContent} : ${lastname.value}
+${ageLabel.textContent} : ${age.value}`);
 </script>
