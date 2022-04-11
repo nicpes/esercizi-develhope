@@ -69,9 +69,14 @@
     form.prepend(firstNameInput);
 
     form.addEventListener("submit", submitPersonForm);
+
+    form.addEventListener("person-form-loaded", function () {
+      console.log("person form loaded");
+    });
+    form.dispatchEvent(personFormLoaded);
   }
 
   window.addEventListener("DOMContentLoaded", initForm);
 
-  const personFormLoaded = new Event("person-form-loaded");
+  const personFormLoaded = new Event("person-form-loaded", { bubbles: true });
 </script>
