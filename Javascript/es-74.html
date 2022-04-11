@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const form = document.getElementById("person-form");
+  const firstName = document.createElement("input");
+  firstName.type = "text";
+  firstName.placeholder = "firstName";
+  const lastName = document.createElement("input");
+  lastName.type = "text";
+  lastName.placeholder = "lastName";
+  const age = document.createElement("input");
+  age.type = "number";
+  age.placeholder = "age";
+
+  function initForm() {
+    form.prepend(age);
+    form.prepend(firstName);
+    form.prepend(lastName);
+  }
+
+  function submitPersonForm(event) {
+    event.preventDefault();
+    const person = {
+      firstName: firstName.value,
+      lastName: lastName.value,
+      age: age.value,
+    };
+    console.log(person);
+  }
+
+  window.addEventListener("DOMContentLoaded", initForm);
+  document.querySelector("button").addEventListener("click", submitPersonForm);
+</script>
