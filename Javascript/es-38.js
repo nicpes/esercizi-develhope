@@ -30,7 +30,7 @@ class BankAccountVip extends BankAccount {
   deposit(amount) {
     if (this.setAmount >= 1000) {
       amount += (amount * 3) / 100;
-      this.setAmount += amount;
+      super.deposit(amount);
     } else this.setAmount += amount;
   }
 }
