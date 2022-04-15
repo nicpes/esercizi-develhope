@@ -1,10 +1,6 @@
 function calculateAverageAge(persons) {
-  let counter = 0;
-  let pers = persons.length;
-  persons.forEach((element) => {
-    counter += element.age;
-  });
-  return counter / pers;
+  let average = persons.map((element) => element.age).reduce((a, b) => a + b);
+  return average / persons.length;
 }
 
 const persons = [

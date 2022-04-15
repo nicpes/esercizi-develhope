@@ -1,9 +1,6 @@
 function nicknameMap(persons) {
-  let nicknames = [];
-  persons.forEach((element) => {
-    nicknames.push(`${element.name}-${element.age}`);
-  });
-  return nicknames;
+  let nicks = persons.map((element) => `${element.name}-${element.age}`);
+  return nicks;
 }
 
 const persons = [
